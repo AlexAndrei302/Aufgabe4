@@ -26,3 +26,14 @@ public int mostExpensive(int[] keyboards, int[] usbs) {
 
 void main() {
 }
+// 3) findet das teuerste USB, das Markus sich leisten kann
+public int bestUsbWithinBudget(int[] usbs, int budget) {
+    int best = -1;
+    for (int u : usbs) {
+        if (u <= budget && u > best) {
+            best = u;
+        }
+    }
+    return best;
+}
+
