@@ -37,3 +37,16 @@ public int bestUsbWithinBudget(int[] usbs, int budget) {
     return best;
 }
 
+// 4) findet maximale Summe (Tastatur + USB), die ins Budget passt
+public int maxSpend(int budget, int[] keyboards, int[] usbs) {
+    int max = -1;
+    for (int k : keyboards) {
+        for (int u : usbs) {
+            int sum = k + u;
+            if (sum <= budget && sum > max) {
+                max = sum;
+            }
+        }
+    }
+    return max;
+}
