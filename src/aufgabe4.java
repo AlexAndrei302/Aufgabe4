@@ -15,10 +15,10 @@ public class aufgabe4 {
 public int mostExpensive(int[] keyboards, int[] usbs) {
     int max = keyboards[0];
 
-    for (int k : keyboards)          // alle Tastaturen prüfen
+    for (int k : keyboards)
         if (k > max) max = k;
 
-    for (int u : usbs)               // alle USBs prüfen
+    for (int u : usbs)
         if (u > max) max = u;
 
     return max;
